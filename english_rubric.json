@@ -1,0 +1,424 @@
+{
+  "_id": "english_board_2026_RUBRIC",
+  "batch_id": "final_2026",
+  "subject": "English Language and Literature",
+  "total_sections": 3,
+  "questions": [
+    {
+      "question_number": "1_i",
+      "section": "A",
+      "max_marks": 1.0,
+      "criteria": "Identify the two main purposes highlighted in the cultural diversity passage.",
+      "key_concepts_expected": [
+        "Achieving peace",
+        "Sustainable development"
+      ]
+    },
+    {
+      "question_number": "1_ii",
+      "section": "A",
+      "max_marks": 1.0,
+      "criteria": "Identify the correct tone option for the text passage.",
+      "key_concepts_expected": [
+        "(D) hopeful and serious"
+      ]
+    },
+    {
+      "question_number": "1_iii",
+      "section": "A",
+      "max_marks": 2.0,
+      "criteria": "Explain how sustainable development can be achieved in approximately 30 words.",
+      "key_concepts_expected": [
+        "Engaging in continuous intercultural dialogue",
+        "Acknowledging the world's natural and cultural diversity",
+        "Drawing upon creative potential from diverse cultures"
+      ]
+    },
+    {
+      "question_number": "1_iv",
+      "section": "A",
+      "max_marks": 2.0,
+      "criteria": "Explain the phrase 'cultural diversity is an asset' and evaluate the writer's tone in this line.",
+      "key_concepts_expected": [
+        "Meaning: Diversity acts as a positive resource/value that bridges gaps between different nations",
+        "Tone description: Objective, confident, affirmative, or appreciative"
+      ]
+    },
+    {
+      "question_number": "1_v",
+      "section": "A",
+      "max_marks": 1.0,
+      "criteria": "Identify the correct conceptual option from the passage.",
+      "key_concepts_expected": [
+        "(D) Culture contributes to sustainable development"
+      ]
+    },
+    {
+      "question_number": "1_vi",
+      "section": "A",
+      "max_marks": 1.0,
+      "criteria": "Identify the specific vocabulary word matching the meaning 'to make known'.",
+      "key_concepts_expected": [
+        "(B) affirm"
+      ]
+    },
+    {
+      "question_number": "1_vii",
+      "section": "A",
+      "max_marks": 1.0,
+      "criteria": "Identify the text resolution origin source.",
+      "key_concepts_expected": [
+        "United Nations/UNESCO resolution regarding cultural diversity or sustainable development"
+      ]
+    },
+    {
+      "question_number": "1_viii",
+      "section": "A",
+      "max_marks": 1.0,
+      "criteria": "Explain what the author means by 'bridging the gap between cultures'.",
+      "key_concepts_expected": [
+        "Fostering understanding, reducing divisions, and creating connection/harmony across diverse societies"
+      ]
+    },
+    {
+      "question_number": "2_i",
+      "section": "A",
+      "max_marks": 2.0,
+      "criteria": "State the core objectives of the National Education Policy (NEP) 2020 mentioned in the text.",
+      "key_concepts_expected": [
+        "Transforming the education system in India",
+        "Exposing at least 50% of learners to skill education by 2025",
+        "Overcoming the social status hierarchy associated with skill education"
+      ]
+    },
+    {
+      "question_number": "2_ii",
+      "section": "A",
+      "max_marks": 1.0,
+      "criteria": "Classify the nature of the statement 'India needs more skill education'.",
+      "key_concepts_expected": [
+        "(B) an opinion, a subjective judgement"
+      ]
+    },
+    {
+      "question_number": "2_iii",
+      "section": "A",
+      "max_marks": 1.0,
+      "criteria": "Select the true objective option based on the text layout description.",
+      "key_concepts_expected": [
+        "(C) Skill labs will allow other schools to use the facility"
+      ]
+    },
+    {
+      "question_number": "2_iv",
+      "section": "A",
+      "max_marks": 1.0,
+      "criteria": "State what setting up skill labs in schools will allow.",
+      "key_concepts_expected": [
+        "Allowing neighboring or other schools to utilize the shared facility resources"
+      ]
+    },
+    {
+      "question_number": "2_v",
+      "section": "A",
+      "max_marks": 1.0,
+      "criteria": "Locate the textual term corresponding to 'sense of self-worth or respect'.",
+      "key_concepts_expected": [
+        "Dignity"
+      ]
+    },
+    {
+      "question_number": "2_vi",
+      "section": "A",
+      "max_marks": 2.0,
+      "criteria": "Identify the country with maximum student skill education allocation and provide relevant reasons based on data data charts.",
+      "key_concepts_expected": [
+        "Accurate identification of the designated high-ranking nation",
+        "Logical justifications linking socio-economic policies or educational structure to skill priorities"
+      ]
+    },
+    {
+      "question_number": "2_vii",
+      "section": "A",
+      "max_marks": 1.0,
+      "criteria": "Identify the target target percentage of learners to be exposed to skill education by 2025.",
+      "key_concepts_expected": [
+        "(A) 50%"
+      ]
+    },
+    {
+      "question_number": "2_viii",
+      "section": "A",
+      "max_marks": 2.0,
+      "criteria": "Explain how NEP 2020 will build awareness and appreciation of Indian arts and artisanship.",
+      "key_concepts_expected": [
+        "By integrating cultural education and crafts into institutions to emphasize the dignity of labor",
+        "Promoting various vocations related to local artisan styles"
+      ]
+    },
+    {
+      "question_number": "3_i",
+      "section": "B",
+      "max_marks": 1.0,
+      "criteria": "Fill in the blank with the grammatically correct verb tense matching 'every day'.",
+      "key_concepts_expected": [
+        "shares"
+      ]
+    },
+    {
+      "question_number": "3_ii",
+      "section": "B",
+      "max_marks": 1.0,
+      "criteria": "Locate structural syntax errors inside the context string 'The river turned and turned.'",
+      "key_concepts_expected": [
+        "Identification of repetitive structure or tense alignment matching syntax tracking patterns"
+      ]
+    },
+    {
+      "question_number": "3_iii",
+      "section": "B",
+      "max_marks": 1.0,
+      "criteria": "Rewrite 'indeed it was always nice to be back there' applying precise capitalization and punctuation rules.",
+      "key_concepts_expected": [
+        "Indeed, it was always nice to be back there."
+      ]
+    },
+    {
+      "question_number": "3_iv",
+      "section": "B",
+      "max_marks": 1.0,
+      "criteria": "Choose the correct past tense option matching the temporal adverb 'yesterday'.",
+      "key_concepts_expected": [
+        "(A) read"
+      ]
+    },
+    {
+      "question_number": "3_v",
+      "section": "B",
+      "max_marks": 1.0,
+      "criteria": "Identify the correct singular possessive pronoun form to complete the sentence structure.",
+      "key_concepts_expected": [
+        "its"
+      ]
+    },
+    {
+      "question_number": "3_viii",
+      "section": "B",
+      "max_marks": 1.0,
+      "criteria": "Identify the appropriate target modal verb representing obligation.",
+      "key_concepts_expected": [
+        "(A) must"
+      ]
+    },
+    {
+      "question_number": "3_ix",
+      "section": "B",
+      "max_marks": 1.0,
+      "criteria": "Rearrange disordered word components into a coherent, grammatically sound sentence.",
+      "key_concepts_expected": [
+        "He had been very occupied with work that week."
+      ]
+    },
+    {
+      "question_number": "3_x",
+      "section": "B",
+      "max_marks": 1.0,
+      "criteria": "Identify the correct option confirming the past tense state form of 'waited'.",
+      "key_concepts_expected": [
+        "(D) waited"
+      ]
+    },
+    {
+      "question_number": "3_xi",
+      "section": "B",
+      "max_marks": 1.0,
+      "criteria": "Select the semantic proverb match option for 'To ___ is to care.'",
+      "key_concepts_expected": [
+        "(A) share"
+      ]
+    },
+    {
+      "question_number": "4_A",
+      "section": "B",
+      "max_marks": 5.0,
+      "criteria": "Draft a formal letter of enquiry as Soumya requesting summer baking course details.",
+      "key_concepts_expected": [
+        "Correct formal letter layout (Sender address: 43-B, Shri Apartments, Prashant Lok; Recipient: Principal, Excellent Cooking School)",
+        "Clear statement of purpose referencing the advertisement date (25 February 20XX)",
+        "Inclusion of key requested parameters (course structure, duration, fee schema, timings, transport, internships)"
+      ]
+    },
+    {
+      "question_number": "5_A",
+      "section": "B",
+      "max_marks": 5.0,
+      "criteria": "Write a 100-120 word analytical paragraph interpreting gym membership growth patterns and pandemic disruptions from 2010 to 2022.",
+      "key_concepts_expected": [
+        "Highlighting the upward trend from 2010 to 2016 and the sharp acceleration in 2018",
+        "Detailing the severe contraction/drop in 2020 driven directly by the Covid-19 pandemic restrictions",
+        "Describing the subsequent post-pandemic recovery and resurgence trends observed by 2022"
+      ]
+    },
+    {
+      "question_number": "6_B_i",
+      "section": "C",
+      "max_marks": 2.0,
+      "criteria": "Draw logical character inferences regarding Anne Frank based on her nursery farewell context extract.",
+      "key_concepts_expected": [
+        "Demonstrates deep emotional attachments and sensitivity",
+        "Shows a affectionate relationship with her educators and institutions"
+      ]
+    },
+    {
+      "question_number": "6_B_ii",
+      "section": "C",
+      "max_marks": 1.0,
+      "criteria": "Identify the specific initial school environment where Anne's grandmother was involved.",
+      "key_concepts_expected": [
+        "(C) Montessori Nursery School"
+      ]
+    },
+    {
+      "question_number": "6_B_iii",
+      "section": "C",
+      "max_marks": 1.0,
+      "criteria": "Identify Mrs. Kuperus and define her operational relationship with Anne Frank.",
+      "key_concepts_expected": [
+        "She was the Headmistress of the Montessori Nursery School and acted as Anne's direct early childhood teacher/mentor"
+      ]
+    },
+    {
+      "question_number": "6_B_iv",
+      "section": "C",
+      "max_marks": 1.0,
+      "criteria": "Analyze what the structural literary phrase 'melancholic farewell' suggests about the event.",
+      "key_concepts_expected": [
+        "Suggests a deeply sorrowful, sad, emotional separation filled with mutual grief and tears"
+      ]
+    },
+    {
+      "question_number": "7_B_i",
+      "section": "C",
+      "max_marks": 1.0,
+      "criteria": "Identify the tone utilized by the poet in 'The Ball Poem' extract.",
+      "key_concepts_expected": [
+        "(B) Sympathetic, understanding the depth of the boy's loss"
+      ]
+    },
+    {
+      "question_number": "7_B_ii",
+      "section": "C",
+      "max_marks": 2.0,
+      "criteria": "Explain the symbolic value of the 'Ball' and isolate the core figure of speech implemented.",
+      "key_concepts_expected": [
+        "Symbolism: Represents innocent childhood days, early possessions, and the inevitable experience of loss",
+        "Figure of speech: Metaphor or Metonymy tracking transient life parameters"
+      ]
+    },
+    {
+      "question_number": "7_B_iii",
+      "section": "C",
+      "max_marks": 1.0,
+      "criteria": "Explain the significance of the text phrase 'All his young days into the harbour'.",
+      "key_concepts_expected": [
+        "Refers to the boy's memories and years of carefree youth disappearing permanently along with the physical ball into the water"
+      ]
+    },
+    {
+      "question_number": "7_B_iv",
+      "section": "C",
+      "max_marks": 2.0,
+      "criteria": "Trace the boy's psychological journey from 'shaking grief' to 'learning' and define what this transition represents.",
+      "key_concepts_expected": [
+        "Transition from paralyzing, raw emotional shock to rational acceptance of accountability/grief",
+        "Represents maturity, growth, and learning the fundamental epistemology of coping with real-world loss"
+      ]
+    },
+    {
+      "question_number": "8_i",
+      "section": "C",
+      "max_marks": 4.0,
+      "criteria": "Elaborate how Robert Frost uses dark natural symbols (crow, hemlock) to spark a positive emotional transformation.",
+      "key_concepts_expected": [
+        "The crow and hemlock tree traditionally represent gloom, doom, or poisonous omens",
+        "The sudden physical action of the crow shaking down the clean snow dust acts as a catalyst",
+        "Brings a sudden shifts in mood, saving the remaining part of the day from regret"
+      ]
+    },
+    {
+      "question_number": "8_iii",
+      "section": "C",
+      "max_marks": 4.0,
+      "criteria": "Justify how Custard the Dragon displays fearsome capabilities despite his submissive, cowardly reputation.",
+      "key_concepts_expected": [
+        "Custard routinely cries for a safe cage while others boast of their bravery",
+        "When the pirate attacks, Custard shows fearsome traits: snorting like an engine, clashing his tail",
+        "He bravely attacks and swallows the pirate whole, proving his genuine physical valor"
+      ]
+    },
+    {
+      "question_number": "8_iv",
+      "section": "C",
+      "max_marks": 4.0,
+      "criteria": "Analyze the central theme of 'For Anne Gregory' comparing human attraction parameters with divine unconditional love.",
+      "key_concepts_expected": [
+        "Human love is frequently superficial, based on external appearance (like yellow hair)",
+        "Divine love is unconditional and focused entirely on internal character, soul parameters, and authentic spiritual merit"
+      ]
+    },
+    {
+      "question_number": "8_v",
+      "section": "C",
+      "max_marks": 4.0,
+      "criteria": "Synthesize Buddha's universal lessons regarding mortality, coping with loss, and the role of virtue in 'The Sermon at Benares'.",
+      "key_concepts_expected": [
+        "Death is inevitable and universal for all living beings; grieving cannot restore the deceased",
+        "Surrendering selfishness and accepting mortality is the path to peace of mind",
+        "Good deeds and keeping an unbacked ethical focus provide comfort amidst transient suffering"
+      ]
+    },
+    {
+      "question_number": "9_i",
+      "section": "C",
+      "max_marks": 5.0,
+      "criteria": "Provide examples to support the statement that Griffin was a brilliant scientist but a lawless, dangerous individual.",
+      "key_concepts_expected": [
+        "Brilliance is proven by his discovery of a formula for human invisibility",
+        "Lawlessness is shown by his unethical actions: setting fire to his landlord's house, robbing a shop in Drury Lane, and stealing cash from the clergyman's desk",
+        "His misuse of science turns it into a dangerous tool of self-preservation and isolation rather than public welfare"
+      ]
+    },
+    {
+      "question_number": "9_ii",
+      "section": "C",
+      "max_marks": 5.0,
+      "criteria": "Trace Bholi's complete psychological transformation from an ignored simpleton into the self-respecting Sulekha under her teacher's care.",
+      "key_concepts_expected": [
+        "Bholi initially suffers from stammering and pockmarks, and lacks confidence due to systemic neglect",
+        "The school teacher provides kindness, clear speech training, and builds her self-worth",
+        "The transformation culminates when she rejects the greedy Bishamber, speaking up with confidence as 'Sulekha'"
+      ]
+    },
+    {
+      "question_number": "10_i",
+      "section": "C",
+      "max_marks": 5.0,
+      "criteria": "Compare and contrast childhood frameworks as described in 'A Baker from Goa' and Nelson Mandela's 'Long Walk to Freedom'.",
+      "key_concepts_expected": [
+        "Similarities: Both reflect on a carefree period filled with simple joys (the aroma of bread vs. running in fields and roasting mealies)",
+        "Differences: The Goan narrator grew up in a stable, peaceful culture, whereas Mandela's childhood freedom was an illusion shaped by a systemic, racially oppressive apartheid regime"
+      ]
+    },
+    {
+      "question_number": "11_ii",
+      "section": "C",
+      "max_marks": 5.0,
+      "criteria": "Explain how Anil's quiet forgiveness and trust transformed Hari Singh in 'The Thief's Story'.",
+      "key_concepts_expected": [
+        "Anil notices the damp stolen notes but chooses not to confront, scold, or turn Hari over to the police",
+        "By ignoring the crime and promising to teach him how to write full sentences, Anil breaks the cycle of deceit",
+        "Trust, sympathy, and the value of education prove far more powerful than punishment in reforming the young thief"
+      ]
+    }
+  ]
+}

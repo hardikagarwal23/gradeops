@@ -1,0 +1,226 @@
+{
+  "batch_id": "final_2026",
+  "subject": "Class 10 Science",
+  "total_sections": 5,
+  "questions": [
+    {
+      "question_number": "21",
+      "section": "B",
+      "max_marks": 2,
+      "criteria": "Identify the chemical reaction, observations, and balanced equation when copper powder is heated in air.",
+      "key_concepts_expected": [
+        "Formation of black copper oxide (CuO)",
+        "Balanced chemical equation: 2Cu + O2 --Heat--> 2CuO"
+      ]
+    },
+    {
+      "question_number": "22",
+      "section": "B",
+      "max_marks": 2,
+      "criteria": "Explain the physical properties of carbon compounds regarding melting/boiling points and electrical conductivity.",
+      "key_concepts_expected": [
+        "Low melting and boiling points due to weak intermolecular forces of attraction",
+        "Poor electrical conductivity due to covalent bonding and absence of free ions or charged particles"
+      ]
+    },
+    {
+      "question_number": "23_a",
+      "section": "B",
+      "max_marks": 2,
+      "criteria": "Explain the physiological cause of muscle cramps during sudden physical activity.",
+      "key_concepts_expected": [
+        "Anaerobic respiration pathway chosen due to a lack or insufficiency of oxygen",
+        "Accumulation/formation of lactic acid in muscle cells causing discomfort"
+      ]
+    },
+    {
+      "question_number": "24",
+      "section": "B",
+      "max_marks": 2,
+      "criteria": "Differentiate between the asexual reproduction mechanisms of Plasmodium and Leishmania.",
+      "key_concepts_expected": [
+        "Plasmodium reproduces via multiple fission within a protective cyst structure during unfavorable conditions",
+        "Leishmania reproduces via binary fission occurring longitudinally relative to its flagellar structure"
+      ]
+    },
+    {
+      "question_number": "25_a",
+      "section": "B",
+      "max_marks": 1.5,
+      "criteria": "Explain why a paper starts burning when sunlight is focused using a convex lens.",
+      "key_concepts_expected": [
+        "Convex lens acts as a converging lens that refracts parallel rays of sunlight",
+        "Concentration of light rays at a single focal point produces localized thermal energy/heat"
+      ]
+    },
+    {
+      "question_number": "25_b",
+      "section": "B",
+      "max_marks": 1.5,
+      "criteria": "Identify the optical term given to the bright sharp spot formed on the paper.",
+      "key_concepts_expected": [
+        "The bright spot represents the Principal Focus of the lens",
+        "It constitutes a real, highly diminished image of the sun"
+      ]
+    },
+    {
+      "question_number": "26",
+      "section": "B",
+      "max_marks": 3,
+      "criteria": "Calculate the time taken for a charge of 500 C to pass through a circuit with a current of 25 mA.",
+      "mathematical_steps_expected": [
+        "Correct current unit conversion: 25 mA = 25/1000 A = 0.025 A",
+        "Use of fundamental electric current formula: I = Q / t rearranged to t = Q / I",
+        "Substitution and base calculation: t = 500 / 0.025 = 20,000 seconds",
+        "Accurate time conversion layout: 20,000 s = 333 minutes and 20 seconds"
+      ]
+    },
+    {
+      "question_number": "27",
+      "section": "C",
+      "max_marks": 3,
+      "criteria": "Analyze the chemical reaction when iron nails are placed in a copper sulphate solution.",
+      "key_concepts_expected": [
+        "Balanced equation: Fe(s) + CuSO4(aq) -> FeSO4(aq) + Cu(s)",
+        "Classification of the process as a displacement reaction where a more reactive metal displaces a less reactive one",
+        "Identification of alternative high-reactivity elements such as Zinc (Zn) or Aluminium (Al)"
+      ]
+    },
+    {
+      "question_number": "28",
+      "section": "C",
+      "max_marks": 3,
+      "criteria": "Explain the extraction process of mercury from its natural sulphide ore.",
+      "key_concepts_expected": [
+        "Identification of the native mineral ore as Cinnabar (HgS)",
+        "Roasting step equation: 2HgS + 3O2 --Heat--> 2HgO + 2SO2",
+        "Thermal reduction equation: 2HgO --Heat--> 2Hg + O2 in the presence of thermal energy"
+      ]
+    },
+    {
+      "question_number": "29",
+      "section": "C",
+      "max_marks": 3,
+      "criteria": "State the source organ and physiological functions of growth hormone and thyroxine.",
+      "key_concepts_expected": [
+        "Growth hormone is secreted by the pituitary gland and governs skeletal and muscle growth layout",
+        "Thyroxine is secreted by the thyroid gland and regulates carbohydrate, protein, and fat metabolic rates"
+      ]
+    },
+    {
+      "question_number": "30",
+      "section": "C",
+      "max_marks": 3,
+      "criteria": "Analyze a monohybrid cross experiment involving tall and short pea plants across F1 and F2 generations.",
+      "key_concepts_expected": [
+        "F1 progeny exhibits uniform tall phenotypes with a heterozygous (Tt) genotype layout",
+        "Shortness trait expression is suppressed in F1 because it is controlled by a recessive allele",
+        "F2 phenotypic generation ratio shows a strict 3:1 pattern (Tall:Short)",
+        "Conclusion that traits are determined by two copies of a gene, demonstrating dominant and recessive behaviors"
+      ]
+    },
+    {
+      "question_number": "31",
+      "section": "C",
+      "max_marks": 3,
+      "criteria": "Define dispersion of white light through a glass prism and explain its physical basis.",
+      "key_concepts_expected": [
+        "Definition of dispersion as the splitting of white light into its constituent VIBGYOR colors",
+        "Refractive index of the medium varies inversely with the wavelength of light causing components to bend at different angles",
+        "Requirement of a labeled geometric ray diagram detailing the incident ray, refraction boundaries, and emergent band layout"
+      ]
+    },
+    {
+      "question_number": "32",
+      "section": "C",
+      "max_marks": 3,
+      "criteria": "Describe the formation, structure, and internal field of an electromagnet using a solenoid setup.",
+      "key_concepts_expected": [
+        "Placing a soft iron core inside a current-carrying solenoid magnetizes it to form an electromagnet",
+        "The internal magnetic field inside a solenoid consists of straight, parallel lines indicating a uniform field structure"
+      ]
+    },
+    {
+      "question_number": "33",
+      "section": "C",
+      "max_marks": 3,
+      "criteria": "Differentiate between a food chain and a food web, and analyze trophic level population disturbances.",
+      "key_concepts_expected": [
+        "Food chain represents a single linear series of linear energy flow, whereas a food web shows complex interconnected networks of food chains",
+        "If a secondary consumer (deer) population drops, tertiary consumers (tigers) decrease due to starvation, while primary producers increase drastically due to reduced grazing pressure"
+      ]
+    },
+    {
+      "question_number": "34_a",
+      "section": "D",
+      "max_marks": 5,
+      "criteria": "Explain water of crystallization using Ferrous Sulphate and Gypsum chemical transitions.",
+      "key_concepts_expected": [
+        "Definition of water of crystallization as a fixed number of water molecules chemically bound in a formula unit",
+        "Thermal degradation of green crystalline ferrous sulphate: FeSO4.7H2O --Heat--> FeSO4 + 7H2O showing a color change to white",
+        "Controlled calcination of Gypsum at 100°C (373K) to yield Plaster of Paris: CaSO4.2H2O -> CaSO4.0.5H2O + 1.5H2O",
+        "Listing core practical applications of Plaster of Paris such as setting fractured bones or manufacturing decorative toys"
+      ]
+    },
+    {
+      "question_number": "35_b",
+      "section": "D",
+      "max_marks": 5,
+      "criteria": "Analyze carbon dioxide volume variances during respiration experiments and identify stomatal structure parameters.",
+      "key_concepts_expected": [
+        "Exhaled air turns lime water milky much faster than atmospheric air due to a significantly higher volumetric concentration of CO2: Ca(OH)2 + CO2 -> CaCO3 + H2O",
+        "Identification of primary microscopic leaf structures: (I) Guard cells regulating the stomatal pore, (II) Chloroplasts",
+        "Listing key functions of stomata including gaseous exchange (O2/CO2) and driving transpiration pull"
+      ]
+    },
+    {
+      "question_number": "36_a",
+      "section": "D",
+      "max_marks": 5,
+      "criteria": "State Ohm's law and evaluate voltage and current distribution parameters across series circuits.",
+      "key_concepts_expected": [
+        "Ohm's Law declaration: V = IR, establishing that current is directly proportional to voltage under constant temperature conditions",
+        "Deduction that if voltage drops to one-third, current drops proportionally to one-third",
+        "Series circuit processing calculation: Req = R1 + R2 + R3 = 5 + 10 + 15 = 30 Ohms",
+        "Total current calculation using Ohm's Law: I = V / Req = 6 / 30 = 0.2 A",
+        "Potential difference computation across individual resistors: V2 = I * R2 = 0.2 * 10 = 2 V"
+      ]
+    },
+    {
+      "question_number": "37",
+      "section": "E",
+      "max_marks": 4,
+      "criteria": "Define hydrocarbons, explain carbon's bonding features, and outline basic organic chemical functional groups and esterification.",
+      "key_concepts_expected": [
+        "Definition of hydrocarbons as organic compounds containing exclusively carbon and hydrogen atoms",
+        "Explanation of carbon's unique structural properties: Catenation (self-linking capability) and Tetravalency",
+        "Structural formula layouts for chemical functional groups: Aldehyde (-CHO) and Ketone (-CO-)",
+        "Esterification reaction equation: CH3COOH + C2H5OH --Conc. H2SO4--> CH3COOC2H5 + H2O"
+      ]
+    },
+    {
+      "question_number": "38",
+      "section": "E",
+      "max_marks": 4,
+      "criteria": "Differentiate pollination methods, explain floral fertilization events, and identify anatomical seed layout functions.",
+      "key_concepts_expected": [
+        "Self-pollination involves pollen transfer within the same flower/plant; cross-pollination involves transfer between separate flowers of the same species",
+        "Function of petals (corolla) in insect attraction and their post-fertilization shedding behavior",
+        "Identification of embryo anatomy layout functions: Plumule (future shoot), Radicle (future root), and Cotyledon (stored nutrient reserves for germination)"
+      ]
+    },
+    {
+      "question_number": "39",
+      "section": "E",
+      "max_marks": 4,
+      "criteria": "Define spherical mirror geometric principles and formulate virtual image tracking paths using ray diagrams.",
+      "key_concepts_expected": [
+        "Definition of the Principal Axis as a straight line passing normal through the pole and center of curvature of a spherical mirror",
+        "Radius of curvature calculation from focal length parameters: R = 2f = 2 * 10 cm = 20 cm",
+        "Construction of a geometric ray diagram mapping object tracking, divergence lines, and virtual image convergence positioning behind a convex mirror surface"
+      ]
+    }
+  ]
+}
+
+
