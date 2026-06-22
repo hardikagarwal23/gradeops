@@ -1,7 +1,8 @@
-# app.py
 import streamlit as st
 import os
 import json
+import sys
+import subprocess
 from core.database import transcripts_collection, grades_collection
 from core.plagiarism_checker import check_classroom_plagiarism
 
@@ -52,7 +53,6 @@ if workspace == "📤 Bulk Exam Ingestion":
         col1, col2 = st.columns(2)
         with col1:
             st.subheader("1. Setup Exam Context Matrix")
-            # 🌟 DYNAMIC SELECTION: Taken dynamically from user inputs
             target_batch = st.text_input("Target Batch Identifier Code", "final_2026")
             subject = st.text_input("Subject Classification Field", "English Language and Literature")
             rubric_file = st.file_uploader("Upload Reference Rubric JSON", type=["json"])
@@ -65,7 +65,6 @@ if workspace == "📤 Bulk Exam Ingestion":
                 3. Drag and drop them together into the box below. Filenames must be `ROLL_NUMBER.pdf`.
             """)
             
-            # Setting accept_multiple_files=True handles multi-file bulk uploads seamlessly
             exam_files = st.file_uploader(
                 "Drop all student PDFs from your folder here", 
                 type=["pdf"], 
@@ -103,10 +102,10 @@ if workspace == "📤 Bulk Exam Ingestion":
                         
                     status_text.success(f"🎉 Folder contents saved successfully! Generated environments for {total_students} students.")
                     
-                    # 🌟 TRIGGER BACKGROUND GRADING LOOP PASSING CLI ARGUMENTS
-                    import subprocess
+                    # 🌟 BULK TASK SUBPROCESS: Calls local venv python environment path cleanly
                     subprocess.Popen([
-                        "python", "main.py", 
+                        sys.executable, 
+                        "main.py", 
                         target_batch, 
                         rubric_filename
                     ])
@@ -117,13 +116,13 @@ if workspace == "📤 Bulk Exam Ingestion":
                 st.warning("⚠️ High alert: Missing files. Ensure both rubric schema and exam copies are present.")
 
 # =========================================================================
-# WORKSPACE B: HIGH-THROUGHPUT TA REVIEW (DYNAMIC VIEWERS)
+# WORKSPACE B: HIGH-THROUGHPUT TA REVIEW (DYNAMIC VIEWERS & SELF-HEALING)
 # =========================================================================
 elif workspace == "⚖️ High-Throughput TA Review":
     st.title("⚖️ Human-in-the-Loop (HITL) Review Dashboard")
     st.markdown("---")
     
-    target_batch = "final_2026"
+    target_batch = st.text_input("🔍 Enter Your Target Batch Identifier Code to Review", "final_2026")
     
     all_grades_cursor = grades_collection.find({"batch_id": target_batch})
     student_list = list(set([doc["student_id"] for doc in all_grades_cursor if "student_id" in doc]))
@@ -144,8 +143,52 @@ elif workspace == "⚖️ High-Throughput TA Review":
     page_docs = list(page_cursor)
 
     if grade_record:
+        # 🟢 SINGLE ROW SUCCESS HEADER BOUND TO LIVE SCORE METRICS
         st.success(f"📂 Active Portfolio: **{active_student}** | Cumulative Pipeline Score: **{grade_record.get('total_marks_awarded', 0)} / {grade_record.get('total_max_marks', 50)}**")
         
+        # ------------------------------------------------------------------
+        # 🚨 GRANULAR SINGLE-STUDENT HEALING TERMINAL
+        # ------------------------------------------------------------------
+        c_status, c_retry_ocr, c_retry_all = st.columns([2, 2, 2])
+        
+        with c_status:
+            current_status = grade_record.get("status", "UNKNOWN")
+            if current_status == "COMPLETED":
+                st.markdown(f"📊 Pipeline Status: :green[**{current_status}**]")
+            else:
+                st.markdown(f"📊 Pipeline Status: :red[**{current_status} / FAILED**]")
+                
+        with c_retry_ocr:
+            if st.button("🔄 Retry Text Extraction", key=f"retry_ocr_{active_student}", width='stretch'):    
+                with st.spinner("Resetting database flags..."):
+                    transcripts_collection.update_many(
+                        {"batch_id": target_batch, "student_id": active_student},
+                        {"$set": {"status": "PENDING", "extracted_text": "Re-queuing over tunnel..."}}
+                    )
+                    grades_collection.delete_one({"batch_id": target_batch, "student_id": active_student})
+                    
+                    # 🛠️ FIXED CLI PASS: Appending explicit rubric trace to bypass main.py fallbacks
+                    rubric_filename = f"rubric_{target_batch}.json"
+                    subprocess.Popen([sys.executable, "main.py", target_batch, rubric_filename])
+                    st.toast(f"Kaggle extraction queue re-triggered for {active_student}!")
+                    st.rerun()
+
+        with c_retry_all:
+            if st.button("⚖️ Retry Grading", key=f"retry_grade_{active_student}", width='stretch'):    
+                with st.spinner("Re-invoking LangGraph agent..."):
+                    grades_collection.delete_one({"batch_id": target_batch, "student_id": active_student})
+                    
+                    # 🛠️ FIXED CLI PASS: Appending explicit rubric trace to bypass main.py fallbacks
+                    rubric_filename = f"rubric_{target_batch}.json"
+                    subprocess.Popen([sys.executable, "main.py", target_batch, rubric_filename])
+                    st.toast(f"Gemini evaluation agents re-triggered for {active_student}!")
+                    st.rerun()
+                    
+        st.markdown("---")
+        
+        # ------------------------------------------------------------------
+        # THE SPLIT-SCREEN CONTROLLER (PDF Display Left | Transcript Editor Right)
+        # ------------------------------------------------------------------
         col_pdf, col_ocr = st.columns([1, 1])
         
         with col_pdf:
@@ -163,7 +206,7 @@ elif workspace == "⚖️ High-Throughput TA Review":
                 try:
                     normalized_path = os.path.normpath(target_img_path)
                     with open(normalized_path, "rb") as img_file:
-                        st.image(img_file.read(), use_container_width=True)
+                        st.image(img_file.read(), width='stretch')
                 except Exception as e:
                     st.error(f"⚠️ Unable to render asset: {str(e)}")
             else:
@@ -186,7 +229,7 @@ elif workspace == "⚖️ High-Throughput TA Review":
                         key=f"text_area_{doc_id}"
                     )
                     
-                    if st.button(f"💾 Commit Page {p_num} Corrections", key=f"save_page_{doc_id}", use_container_width=True):
+                    if st.button(f"💾 Commit Page {p_num} Corrections", key=f"save_page_{doc_id}", width='stretch'):
                         transcripts_collection.update_one(
                             {"_id": page["_id"]},
                             {"$set": {"extracted_text": updated_text}}
@@ -209,6 +252,7 @@ elif workspace == "⚖️ High-Throughput TA Review":
                 max_marks = float(q_block.get("max_marks", q_block.get("max", 1.0)))
                 awarded_marks = float(q_block.get("marks_awarded", q_block.get("awarded", 0.0)))
                 justification = q_block.get("feedback", q_block.get("justification", "No validation log trace."))
+                extracted_snippet = q_block.get("exact_evaluated_text_segment", "No segment targeted.")
                 
                 r_col1, r_col2, r_col3, r_col4 = st.columns([1.2, 1.8, 2.0, 1.8])
                 
@@ -216,6 +260,10 @@ elif workspace == "⚖️ High-Throughput TA Review":
                     st.markdown(f"**Q{q_num_raw}** `({max_marks}M)`")
                 with r_col2:
                     with st.popover("🤖 Read Feedback"):
+                        st.markdown("**Evaluated Transcript Snippet:**")
+                        st.code(extracted_snippet, language="text")
+                        st.markdown("---")
+                        st.markdown("**AI Context Evaluation:**")
                         st.write(justification)
                 with r_col3:
                     new_score = st.number_input(
@@ -225,9 +273,9 @@ elif workspace == "⚖️ High-Throughput TA Review":
                         label_visibility="collapsed"
                     )
                 with r_col4:
-                    if st.button("✅ Override", key=f"ovr_{normalized_q_num}_{active_student}", use_container_width=True):
+                    if st.button("✅ Override", key=f"ovr_{normalized_q_num}_{active_student}", width='stretch'):    
                         grades_collection.update_one(
-                            {"student_id": active_student, "batch_id": target_batch, f"question_breakdown.{idx}.{list(q_block.keys())[0]}": q_block[list(q_block.keys())[0]]},
+                            {"student_id": active_student, "batch_id": target_batch},
                             {"$set": {
                                 f"question_breakdown.{idx}.marks_awarded": new_score,
                                 f"question_breakdown.{idx}.awarded": new_score
@@ -246,9 +294,9 @@ elif workspace == "⚖️ High-Throughput TA Review":
                 st.markdown("<div style='margin-top: -12px;'></div>", unsafe_allow_html=True)
                 st.markdown("---")
 
-# ==========================================
+# =========================================================================
 # WORKSPACE C: BATCH PLAGIARISM AUDIT
-# ==========================================
+# =========================================================================
 elif workspace == "🚨 Plagiarism Audit Analytics":
     st.title("🚨 Batch Plagiarism Auditing Terminal")
     st.markdown("---")
@@ -295,6 +343,3 @@ elif workspace == "🚨 Plagiarism Audit Analytics":
                                 for phrase in block["evidence_phrases"]:
                                     st.markdown(f"- :red[`\"{phrase}\"`]")
                                 st.markdown("---")
-                                
-                                
-                            
