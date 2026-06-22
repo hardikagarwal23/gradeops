@@ -1,4 +1,3 @@
-# test_plagiarism.py
 import json
 from core.database import transcripts_collection
 from core.plagiarism_checker import (
