@@ -1,4 +1,3 @@
-# core/extraction.py
 import asyncio
 import os
 from core.database import transcripts_collection
