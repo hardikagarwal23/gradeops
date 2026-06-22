@@ -1,9 +1,8 @@
-# main.py
 import asyncio
 import os
-import sys  # 🌟 Added to catch CLI variables
+import sys
 import json
-from datetime import datetime
+from datetime import datetime, timezone
 from dotenv import load_dotenv
 from core.database import grades_collection, transcripts_collection
 from core.grader_graph import grading_pipeline
@@ -12,9 +11,11 @@ load_dotenv()
 
 async def main():
     # 🌟 DYNAMIC CLI FALLBACK CHECKS:
-    # sys.argv[1] reads the batch name, sys.argv[2] reads the rubric filename
+    # sys.argv[1] reads the batch name
     target_batch = sys.argv[1] if len(sys.argv) > 1 else "final_2026"
-    rubric_file_path = sys.argv[2] if len(sys.argv) > 2 else "english_rubric.json"
+    
+    # 🛠️ AUTOMATED FALLBACK: If a custom rubric path isn't provided, infer it from the batch code dynamically
+    rubric_file_path = sys.argv[2] if len(sys.argv) > 2 else f"rubric_{target_batch}.json"
     
     # Construct the directory dynamically using your parsed tracking string
     upload_root_dir = f"./uploaded_exams/{target_batch}/"
@@ -24,8 +25,6 @@ async def main():
     print(f"📦 Active Target Batch: {target_batch}")
     print(f"📖 Using Rubric Reference File: {rubric_file_path}")
     print("====================================================")
-    
-    # [The rest of your updated main.py processing logic code continues exactly the same here...]
     
     # 1. LOAD THE MASTER RUBRIC CRITERIA
     if not os.path.exists(rubric_file_path):
@@ -77,20 +76,13 @@ async def main():
         }
         
         try:
-            # Invoke the LangGraph multi-agent network execution
-            # (Ensure your grader graph script extracts images to individual files inside 'student_subfolder_path')
-            final_output_state = grading_pipeline.invoke(initial_graph_state)
+            # Invoke the LangGraph multi-agent network execution natively as an async coroutine
+            final_output_state = await grading_pipeline.ainvoke(initial_graph_state)
             eval_data = final_output_state.get("evaluation_breakdown", {})
             
             if not eval_data or "question_breakdown" not in eval_data:
                 print(f"⚠️ Warning: Network generation skipped or failed for student: {current_student_id}")
                 continue
-
-            # 🌟 FIX FOR PANEL VIEWER: Re-verify that page transcripts are saved into the database tracking indices
-            # (If your LangGraph pipeline nodes don't handle this natively, execute structural insertions here)
-            # Example verification step log trace check:
-            # count = transcripts_collection.count_documents({"student_id": current_student_id, "batch_id": target_batch})
-            # print(f"📝 Verified {count} page asset records populated inside transcripts_collection database indices.")
 
             # Build structural grading payload profile mapping definitions
             grade_record = {
@@ -98,9 +90,10 @@ async def main():
                 "batch_id": target_batch,
                 "student_id": current_student_id,
                 "subject": eval_data.get("subject", rubric_doc.get("subject")),
-                "total_max_marks": eval_data.get("total_max_marks", 50.0), # Updated default fallback tracking to 50 marks matrix
+                "total_max_marks": eval_data.get("total_max_marks", 50.0), # Default fallback tracking to 50 marks matrix
                 "total_marks_awarded": eval_data.get("total_marks_awarded", 0.0),
-                "evaluated_at": datetime.utcnow().isoformat() + "Z",
+                # 🌟 FIXED: Clean, non-deprecated timezone aware UTC tracker syntax
+                "evaluated_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
                 "question_breakdown": eval_data.get("question_breakdown", []),
                 "status": "COMPLETED"
             }
